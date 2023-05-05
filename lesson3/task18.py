@@ -8,7 +8,6 @@
 #    -> 5
 
 from random import randrange
-N = 10
 A = [randrange(1, 20) for _ in range(int(input('Введите количество элементов в массиве: ')))]
 print(*A)
 

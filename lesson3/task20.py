@@ -20,7 +20,7 @@ list_scrabble = {1:"AEIOULNSTRАВЕИНОРСТ",
 word = input("Введите слово: ").upper()
 summ = 0
 for i in word:
-    for a, b in list_scrabble():
+    for a, b in list_scrabble.items():
         if i in b:
             summ += a
 print(f"Стоимость слова: {summ}")

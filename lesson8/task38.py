@@ -82,7 +82,7 @@ def replace_record_line(file_name: str, record_id, replaced_line: str):
 def change_records(file_name: str):
     record_id = check_id_record(file_name, 'изменить')
     if record_id != 'q':
-        replaced_line = f'{int(record_id)} ' + ' '.join(
+        replaced_line = f'{int(record_id)} ' + ''.join(
             input('Введите фамилию, имя, отчество, номер телефона через пробел\n').split()[:4]) + ';\n'
         confirm = confirmation('изменение')
         if confirm == 'y':
@@ -99,9 +99,9 @@ def delete_records(file_name: str):
 
 path = 'C:/Users/79257/Desktop/workout/lesson8/base.txt'
 
-try:                        # исключения try/except/finally
-    file = open(path, 'r')  # открыть файл
-except IOError:             # если нет файла он создается
+try:                        
+    file = open(path, 'r')  
+except IOError:             
     print('Создан новый справочник -> base.txt ')
     file = open(path, 'w')
 finally:                    
